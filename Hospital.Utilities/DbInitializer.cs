@@ -49,7 +49,12 @@ namespace Hospital.Utilities
             _userManger.CreateAsync(new ApplicationUser
             {
                 UserName = "Jullian.Christopher",
-                Email = "test@xyz.com"
+                Email = "test@xyz.com",
+                Department = new Department
+                {
+                    Id = 5,
+                    Name = "HR Department",
+                }
             }, "test1A!23").GetAwaiter().GetResult();
 
             var Appuser = _context.ApplicationUsers.FirstOrDefault(x => x.Email == "test@xyz.com");
