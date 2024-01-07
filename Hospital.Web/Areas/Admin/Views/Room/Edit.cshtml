@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Edit";
+    SelectList hospitals = (SelectList)ViewBag.hospital;
 }
 
 <h1>Edit</h1>
@@ -34,7 +35,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="HospitalInfoId" class="control-label"></label>
-                <input asp-for="HospitalInfoId" class="form-control" />
+                <select asp-for="HospitalInfoId" class="form-control">
+                    <option value="">Select a Hospital</option>
+                    @foreach (var h in hospitals)
+                    {
+                        <option value="@h.Value"> @h.Text</option>
+                    }
+                </select>
                 <span asp-validation-for="HospitalInfoId" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -27,6 +27,15 @@ namespace Hospital.Services
            _unitOfWork.Save();
         }
 
+        public List<HospitalInfoViewModel> GetAll()
+        {
+            var modeList = _unitOfWork.GenericRepository<HospitalInfo>()
+                                       .GetAll()
+                                       .ToList();
+
+            return ConvertModelToViewModelList(modeList);
+        }
+
         public PagedResult<HospitalInfoViewModel> GetAll(int pageNumber, int pageSize)
         {
             var vm = new HospitalInfoViewModel();

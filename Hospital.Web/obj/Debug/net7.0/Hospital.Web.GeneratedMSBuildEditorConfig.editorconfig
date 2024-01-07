@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Projects\Public Projects\HospitalManagement\Hospital\Hospital.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Projects/Public Projects/HospitalManagement/Hospital/Hospital.Web/Areas/Admin/Views/Contacts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/Public Projects/HospitalManagement/Hospital/Hospital.Web/Areas/Admin/Views/Contacts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/Public Projects/HospitalManagement/Hospital/Hospital.Web/Areas/Admin/Views/Contacts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/Public Projects/HospitalManagement/Hospital/Hospital.Web/Areas/Admin/Views/Hospitals/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9zcGl0YWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projects/Public Projects/HospitalManagement/Hospital/Hospital.Web/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/Public Projects/HospitalManagement/Hospital/Hospital.Web/Areas/Identity/Pages/Account/DoctorRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxEb2N0b3JSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/Public Projects/HospitalManagement/Hospital/Hospital.Web/Areas/Identity/Pages/Account/ExternalLogin.cshtml]

@@ -36,7 +36,7 @@ namespace Hospital.Services
             {
                 int ExcludeRecords = (pageSize * pageNumber) - pageSize;
                 var modeList = _unitOfWork.GenericRepository<Contact>()
-                                          .GetAll()
+                                          .GetAll(includeProperties: "Hospital")
                                           .Skip(ExcludeRecords)
                                           .Take(pageSize)
                                           .ToList();

@@ -512,6 +512,45 @@ namespace Hospital.Repositories.Migrations
                     b.ToTable("TestPrices");
                 });
 
+            modelBuilder.Entity("Hospital.Models.Timing", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AfternoonShiftEndTime")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AfternoonShiftStartTime")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DoctorIdId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MorningShiftEndTime")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MorningShiftStartTime")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorIdId");
+
+                    b.ToTable("Timings");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -735,11 +774,18 @@ namespace Hospital.Repositories.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsDoctor")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nationality")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureUri")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -894,6 +940,15 @@ namespace Hospital.Repositories.Migrations
                     b.Navigation("Bill");
 
                     b.Navigation("Lab");
+                });
+
+            modelBuilder.Entity("Hospital.Models.Timing", b =>
+                {
+                    b.HasOne("Hospital.Models.ApplicationUser", "DoctorId")
+                        .WithMany()
+                        .HasForeignKey("DoctorIdId");
+
+                    b.Navigation("DoctorId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
