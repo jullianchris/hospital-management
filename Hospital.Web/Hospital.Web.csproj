@@ -26,8 +26,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="Areas\Doctor\Controllers\" />
-    <Folder Include="Areas\Doctor\Views\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 

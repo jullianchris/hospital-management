@@ -14,6 +14,8 @@ namespace Hospital.Models
         public string Specialist                     { get; set; }
         public bool IsDoctor                         { get; set; }
         public string PictureUri                     { get; set; }
+        public string City                           { get; set; }
+
         [NotMapped]
         public Department Department                 { get; set; }
         [NotMapped]
